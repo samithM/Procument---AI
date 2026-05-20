@@ -170,7 +170,7 @@ with tab5:
                     """
                     
                     # Call Gemini Model
-                    model = genai.GenerativeModel("gemini-1.5-flash")
+                    model = genai.GenerativeModel("gemini-1.5-flash-latest")
                     response = model.generate_content(prompt)
                     generated_text = response.text
                     
