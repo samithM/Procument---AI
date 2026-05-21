@@ -170,8 +170,11 @@ with tab5:
                     """
                     
                     # Call Gemini Model
-                    model = genai.GenerativeModel("gemini-1.5-flash-latest")
-                    response = model.generate_content(prompt)
+                    model = genai.GenerativeModel(
+    model_name="gemini-1.5-flash",
+    generation_config={"response_mime_type": "text/plain"}
+)
+response = model.generate_content(prompt)
                     generated_text = response.text
                     
                     st.success("🎉 AI Content Generated Successfully!")
